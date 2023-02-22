@@ -45,8 +45,8 @@ const Common = {
         },
         beforeLeave: function(origin, destination) {
           if (!scrollDown) return
-          scrollDown.classList.toggle('btn-scroll--texty', destination.anchor === 'whois')
-          scrollDown.classList.toggle('btn-light', destination.anchor !== 'whois')
+          // scrollDown.classList.toggle('btn-scroll--texty', destination.anchor === 'whois')
+          // scrollDown.classList.toggle('btn-light', destination.anchor !== 'whois')
           scrollDown.classList.toggle('invisible', destination.anchor === 'contacts')
         },
         onSlideLeave: function(section, origin, destination) {
