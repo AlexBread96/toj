@@ -1,0 +1,22 @@
+section.section.section--move.fp-auto-height-responsive(data-anchor="move")
+  .container
+    .move-container.row
+      .col-lg-4
+        .move-main
+          h2.section-title.move-title Двигайся в&nbsp;ритме #[span ТОЖ]
+          .section-text.move-text.row
+            .col-md-6.col-lg-12
+              p Если ты&nbsp;всё ещё думаешь, что готовить и&nbsp;заниматься спортом одновременно невозможно, то&nbsp;спешим доказать обратное!
+            .col-md-6.col-lg-12
+              p Вдохновляйся примером наших героев из&nbsp;ролика&nbsp;&mdash; бери творог &laquo;Искренне Ваш&raquo; в&nbsp;руки и&nbsp;занимайся кухонной аэробикой вместе с&nbsp;ними!
+      .col-lg-7.offset-lg-1
+        .move-video
+          .video-container.ratio.ratio-16x9
+            .video-play(aria-hidden="true")
+              +icon("play")(width="29" height="31")
+            a.glightbox(href="https://vk.com/video_ext.php?oid=-149500863&id=456242083&hash=4192439382db640a&hd=1" data-width="640px" data-height="360px" data-gallery="releases" aria-title="Смотреть видео")
+              picture
+                source(data-srcset="i/move/video-preview.avif, i/move/video-preview@2x.avif 2x" type="image/avif")
+                source(data-srcset="i/move/video-preview.webp, i/move/video-preview@2x.webp 2x" type="image/webp")
+                source(data-srcset="i/move/video-preview.jpg, i/move/video-preview@2x.jpg 2x" type="image/jpeg")
+                img.lazyload(data-src="i/move/video-preview.png" width="704" height="399" alt="" loading="lazy")

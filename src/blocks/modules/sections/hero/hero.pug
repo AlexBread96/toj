@@ -1,0 +1,24 @@
+section.section.section--hero.fp-auto-height-responsive(data-anchor="hero")
+  .container
+    .hero-container
+      .hero-image(aria-hidden="true")
+        .parallax
+          each depth, index in [0.25, 0.2, 0.15, 0.1, 0.05]
+            picture(data-depth=depth)
+              source(data-srcset=`i/hero/packshot-${index + 1}.avif, i/hero/packshot-${index + 1}@2x.avif 2x` media="(min-width: 744px)" type="image/avif")
+              source(data-srcset=`i/hero/packshot-${index + 1}.webp, i/hero/packshot-${index + 1}@2x.webp 2x` media="(min-width: 744px)" type="image/webp")
+              source(data-srcset=`i/hero/packshot-${index + 1}.png, i/hero/packshot-${index + 1}@2x.png 2x` media="(min-width: 744px)" type="image/png")
+              source(data-srcset=`i/hero/packshot-${index + 1}-sm.avif, i/hero/packshot-${index + 1}-sm@2x.avif 2x` type="image/avif")
+              source(data-srcset=`i/hero/packshot-${index + 1}-sm.webp, i/hero/packshot-${index + 1}-sm@2x.webp 2x` type="image/webp")
+              source(data-srcset=`i/hero/packshot-${index + 1}-sm.png, i/hero/packshot-${index + 1}-sm@2x.png 2x` type="image/png")
+              img.lazyload(data-src=`i/hero/packshot-${index + 1}.png` alt="")
+      .hero-main
+        h1.hero-title
+          div #[strong Т]#[span ворожный]
+          div #[strong О]#[span браз]
+          div #[strong Ж]#[span изни]
+        .section-text.hero-text
+          p Двигайся в&nbsp;ритме ТОЖ!#[br]Выбирай активный образ жизни и&nbsp;здоровое питание в&nbsp;удовольствие
+        .hero-button
+          button.btn.btn-secondary(type="button" data-scrollto="quiz") Узнай какой ты ТОЖник
+  include ../../marquee/marquee

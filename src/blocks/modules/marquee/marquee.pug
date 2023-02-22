@@ -1,0 +1,9 @@
+.marquee(aria-hidden="true")
+  - var i = 0;
+  while i < 2
+    .marquee-list
+      - var j = 0;
+      while j < 10
+        img.marquee-item(src="i/toj.svg" role="img" alt="")
+        - j++;
+    - i++;

@@ -1,0 +1,91 @@
+section.section.section--wheel.fp-auto-height-responsive(data-anchor="wheel")
+  .container
+    .wheel-container.wheel-container--start.row
+      .col-md-6
+        .wheel-main
+          h2.section-title.wheel-title Раскрути колесо #[span ТОЖ]
+          .section-text.wheel-text
+            p Не&nbsp;знаешь, что сделать из&nbsp;творога &laquo;Искренне Ваш&raquo;? Хорошо, что и&nbsp;на&nbsp;этот вопрос у&nbsp;ТОЖников есть ответ!
+            ul
+              li Раскрути колесо ТОЖ, чтобы случайным образом получить вкусный и&nbsp;полезный рецепт.
+              li Сохрани этот рецепт в&nbsp;ТОЖном чат-боте, пройди тест &laquo;Насколько ты&nbsp;ТОЖник&raquo; и&nbsp;участвуй в&nbsp;розыгрыше денежных сертификатов OZON!
+            p Положись на&nbsp;удачу&nbsp;&mdash; вращай колесо ТОЖа!
+          .wheel-button
+            button.btn.btn-secondary.btn-rotate(type="button") Вращать колесо ТОЖ
+      .col-md-6
+        .wheel-image-wrapper
+          .wheel-image
+            picture
+              source(data-srcset="i/wheel/drum.avif, i/wheel/drum@2x.avif 2x" media="(min-width: 744px)" type="image/avif")
+              source(data-srcset="i/wheel/drum.webp, i/wheel/drum@2x.webp 2x" media="(min-width: 744px)" type="image/webp")
+              source(data-srcset="i/wheel/drum.png, i/wheel/drum@2x.png 2x" media="(min-width: 744px)" type="image/png")
+              source(data-srcset="i/wheel/drum-sm.avif, i/wheel/drum-sm@2x.avif 2x" type="image/avif")
+              source(data-srcset="i/wheel/drum-sm.webp, i/wheel/drum-sm@2x.webp 2x" type="image/webp")
+              source(data-srcset="i/wheel/drum-sm.png, i/wheel/drum-sm@2x.png 2x" type="image/png")
+              img.wheel-drum.lazyload(data-src="i/wheel/drum.png" width="864" height="864" alt="" loading="lazy")
+            picture
+              source(data-srcset="i/wheel/ring.avif, i/wheel/ring@2x.avif 2x" media="(min-width: 744px)" type="image/avif")
+              source(data-srcset="i/wheel/ring.webp, i/wheel/ring@2x.webp 2x" media="(min-width: 744px)" type="image/webp")
+              source(data-srcset="i/wheel/ring.png, i/wheel/ring@2x.png 2x" media="(min-width: 744px)" type="image/png")
+              source(data-srcset="i/wheel/ring-sm.avif, i/wheel/ring-sm@2x.avif 2x" type="image/avif")
+              source(data-srcset="i/wheel/ring-sm.webp, i/wheel/ring-sm@2x.webp 2x" type="image/webp")
+              source(data-srcset="i/wheel/ring-sm.png, i/wheel/ring-sm@2x.png 2x" type="image/png")
+              img.wheel-ring.lazyload(data-src="i/wheel/ring.png" width="864" height="864" alt="" loading="lazy")
+    .wheel-container.wheel-container--result.row.d-none.hidden
+      .col-md-6
+        .wheel-main
+          h2.section-title.wheel-title Раскрути колесо #[span ТОЖ]
+          .section-text.recipe
+            h4.recipe-title Творожники
+            .recipe-block
+              h5.recipe-block__title Ингредиенты:
+              .recipe-block__text.recipe-block__text--cols
+                | Грейпфрут 1 шт.
+                br
+                | Шпинат 200-250 г
+                br
+                | Орехи на ваш выбор 50 г
+                br
+                | Творог зерненый «Искренне Ваш»
+                br
+                | Мед — 2 ч.л.
+                br
+                | Горчица — 1-1.5 ч.л.
+                br
+                | Оливковое масло — 2-3 ч.л.
+                br
+                | Винный уксус — 2 ч.л.
+            .recipe-block
+              h5.recipe-block__title Приготовление:
+              .recipe-block__text
+                .row
+                  .col-md-6
+                    p Творог перетереть через сито, либо взбить блендером. Яйца взбить с сахаром до пышной пены. Смешать яйца с творогом. Добавить щепотку соли.
+                  .col-md-6
+                    p Всыпать муку и размешать ещё раз. Обжаривать до румяной корочки по 2-3 минуты с 2-х сторон. Вкусный десерт готов.
+                    p Приятного аппетита!
+          .section-buttons
+            div
+              a.btn.btn-secondary.btn-iconed(href="#" target="_blank")
+                span Отправить в Telegram
+                +icon("telegram-sm")(width="17" height="14")
+            div
+              a.btn.btn-secondary.btn-iconed(href="#" target="_blank")
+                span Отправить в VK
+                +icon("vk-sm")(width="17" height="12")
+          .section-buttons
+            div
+              button.btn.btn-outline-white.btn-rotate-again(type="button") Вращать ещё раз
+            div
+              a.btn.btn-outline-white(href="#" target="_blank") ТОЖный ассортимент
+      .col-md-6
+        .wheel-image-wrapper
+          .wheel-image
+            picture
+              source(data-srcset="i/wheel/result.avif, i/wheel/result@2x.avif 2x" media="(min-width: 744px)" type="image/avif")
+              source(data-srcset="i/wheel/result.webp, i/wheel/result@2x.webp 2x" media="(min-width: 744px)" type="image/webp")
+              source(data-srcset="i/wheel/result.png, i/wheel/result@2x.png 2x" media="(min-width: 744px)" type="image/png")
+              source(data-srcset="i/wheel/result-sm.avif, i/wheel/result-sm@2x.avif 2x" type="image/avif")
+              source(data-srcset="i/wheel/result-sm.webp, i/wheel/result-sm@2x.webp 2x" type="image/webp")
+              source(data-srcset="i/wheel/result-sm.png, i/wheel/result-sm@2x.png 2x" type="image/png")
+              img.lazyload(data-src="i/wheel/result.png" width="864" height="864" alt="" loading="lazy")

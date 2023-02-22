@@ -1,0 +1,72 @@
+.btn-scroll {
+  align-items: center;
+  bottom: rem(100);
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  position: fixed;
+  right: rem(20);
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, opacity .25s ease-in-out, visibility .25s ease-in-out;
+  z-index: $zindex-fixed;
+
+  @media (min-width: 1280px) {
+    right: 1.5625vw;
+  }
+
+  &--texty {
+    font-size: .75rem;
+    font-weight: 700;
+    height: auto;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: none;
+
+    .icon-arrow-down {
+      display: none;
+    }
+  }
+
+  &:not(.btn-scroll--texty) {
+    border-radius: 50%;
+    height: rem(44);
+    width: rem(44);
+
+    &::before {
+      animation: pulse 3s infinite;
+      border-radius: inherit;
+      box-shadow: 0 0 0 0 rgba($white, .125);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .btn-scroll__text {
+      display: none;
+    }
+  }
+
+  &.invisible {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:active {
+    border-color: transparent !important;
+  }
+}
+
+@keyframes pulse {
+  0%, 60%, 100% {
+    opacity: 0;
+  }
+	30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 3rem rgba($white, .125);
+  }
+}

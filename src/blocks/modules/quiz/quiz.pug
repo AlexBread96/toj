@@ -1,0 +1,73 @@
+.slide(data-anchor="quiz")
+  .container
+    .quizz-container.quizz-container--quiz.row
+      .row
+        .col-md-8.col-lg-6
+          h2.section-title.quizz-title Узнай, насколько#[br]ты #[span ТОЖ]ник
+      .col-md-7.col-lg-5
+        .quizz-main
+          .quizz-slider.swiper
+            .swiper-wrapper
+              - var i = 0;
+              while i < 4
+                .quizz-item.swiper-slide
+                  .quizz-subtitle Признавайся, ты занимаешься спортом на&nbsp;кухне во&nbsp;время готовки?
+                  ul.quizz-vars
+                    li.quizz-vars-item
+                      .form-check
+                        input.form-check-input(type="radio" name=`quiz-question-${i + 1}` id=`quiz-question-${i + 1}-var-1`)
+                        label.form-check-label(for=`quiz-question-${i + 1}-var-1`) Да, я даже сейчас это делаю
+                    li.quizz-vars-item
+                      .form-check
+                        input.form-check-input(type="radio" name=`quiz-question-${i + 1}` id=`quiz-question-${i + 1}-var-2`)
+                        label.form-check-label(for=`quiz-question-${i + 1}-var-2`) Нет, я выполняю только приседания на&nbsp;стул
+                    if i !== 1
+                      li.quizz-vars-item
+                        .form-check
+                          input.form-check-input(type="radio" name=`quiz-question-${i + 1}` id=`quiz-question-${i + 1}-var-3`)
+                          label.form-check-label(for=`quiz-question-${i + 1}-var-3`) Раз, два, три, четыре&nbsp;— занимаюсь спортом не&nbsp;в&nbsp;квартире!
+                - i++;
+            .quizz-pages.swiper-pagination
+      .quizz-progress-wrapper.col-md-5.offset-lg-2
+        .quizz-progress
+          .quizz-progress__decor
+            picture
+              source(srcset="i/quizz/progress-cheese.webp, i/quizz/progress-cheese@2x.webp 2x" type="image/webp")
+              source(srcset="i/quizz/progress-cheese.png, i/quizz/progress-cheese@2x.png 2x" type="image/png")
+              img(src="i/quizz/progress-cheese.png" width="148" height="163" alt="" aria-hidden="true")
+          include ./progress.svg
+    .quizz-container.quizz-container--result.row.d-none.hidden
+      .row
+        .col-md-8.col-lg-6
+          h2.section-title.quizz-title Узнай, насколько#[br]ты #[span ТОЖ]ник
+      .col-md-6.col-xl-5
+        .quizz-main
+          .quizz-subtitle Мы определили, какой ты ТОЖник…
+          .quizz-result.d-md-none
+            picture
+              source(data-srcset="i/quizz/result-25-sm.avif, i/quizz/result-25-sm@2x.avif 2x" type="image/avif")
+              source(data-srcset="i/quizz/result-25-sm.webp, i/quizz/result-25-sm@2x.webp 2x" type="image/webp")
+              source(data-srcset="i/quizz/result-25-sm.png, i/quizz/result-25-sm@2x.png 2x" type="image/png")
+              img.lazyload(data-src="i/quizz/result-25-sm.png" width="405" height="360" alt="" loading="lazy")
+          .quizz-text.section-text
+            p
+              span.text-uppercase.text-larger Ты ТОЖник на&nbsp;25%
+            p Оу, тебе явно пора взять себя и&nbsp;творог в&nbsp;руки и&nbsp;присоединиться к&nbsp;ТОЖу! Для начала подойдёт «Искренне ваш» 5%!
+            p Сохрани результат в&nbsp;чат-боте и&nbsp;участвуй в&nbsp;розыгрыше призов!
+          .section-buttons
+            div
+              a.btn.btn-secondary.btn-iconed(href="#" target="_blank")
+                span Сохранить в Telegram
+                +icon("telegram-sm")(width="17" height="14")
+            div
+              a.btn.btn-secondary.btn-iconed(href="#" target="_blank")
+                span Сохранить в VK
+                +icon("vk-sm")(width="17" height="12")
+      .col-md-5.offset-md-1.offset-xl-2.d-none.d-md-block
+        .quizz-result-wrapper
+          .quizz-result
+            picture
+              source(data-srcset="i/quizz/result-25.avif, i/quizz/result-25@2x.avif 2x" type="image/avif")
+              source(data-srcset="i/quizz/result-25.webp, i/quizz/result-25@2x.webp 2x" type="image/webp")
+              source(data-srcset="i/quizz/result-25.png, i/quizz/result-25@2x.png 2x" type="image/png")
+              img.lazyload(data-src="i/quizz/result-25.png" width="830" height="738" alt="" loading="lazy")

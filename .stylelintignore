@@ -1,0 +1,4 @@
+dist/**/*.css
+src/styles/utils/**/*.scss
+src/styles/vendor/**/*.scss
+node_modules/**/*.*

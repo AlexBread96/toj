@@ -1,0 +1,34 @@
+nav.navbar.navbar-expand-md.fixed-top
+  .container
+    .navbar-container
+      a(href="/" aria-label="Творожный Образ Жизни")
+        img.navbar-brand(src="i/logo.svg" width="146" height="128" alt="Искренне Ваш")
+      button.btn.btn-light.navbar-toggler.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Открыть меню")
+        span.navbar-toggler-bar
+        span.navbar-toggler-bar
+        span.navbar-toggler-bar
+      .collapse.navbar-collapse#navigation
+        .navbar-collapse-inner
+          .navbar-header.d-lg-none
+            img.navbar-brand(src="i/logo.svg" width="146" height="128" alt="Искренне Ваш")
+          ul.navbar-nav#menu
+            li.nav-item(data-menuanchor="quiz")
+              a.btn.btn-light.nav-link(href="#quiz") Насколько ты ТОЖник
+            li.nav-item(data-menuanchor="about")
+              a.btn.btn-light.nav-link(href="#about") Что такое ТОЖ?
+            li.nav-item(data-menuanchor="move")
+              a.btn.btn-light.nav-link(href="#move") Челендж #творобика
+            li.nav-item(data-menuanchor="contacts")
+              a.btn.btn-light.nav-link(href="#contacts") Обратная связь
+          .navbar-footer.d-lg-none
+            .navbar-footer-container
+              .footer-main
+                .footer-contacts Горячая линия службы качества#[br]#[a.text-nowrap(href="tel:88007700774") 8 800 770-07-74]
+                ul.footer-links
+                  li.footer-links-item
+                    a(href="#") Познакомиться с&nbsp;ассортиментом
+              .footer-side
+                ul.footer-socials
+                  li.footer-socials-item
+                    a(href="#" title="ВКонтакте" aria-label="ВКонтакте")
+                      img(src="i/icon-vk.svg" role="img" width="64" height="64" alt="VK")

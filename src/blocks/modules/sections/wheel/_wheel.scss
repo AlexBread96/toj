@@ -1,0 +1,169 @@
+.section--wheel {
+  overflow: hidden;
+  padding-top: rem(140);
+
+  .section-title {
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: .875rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 2.25rem;
+    }
+  }
+}
+
+.wheel-container {
+  transition: opacity .5s ease, transform .5s ease;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: scale(.975);
+  }
+}
+
+.wheel-main {
+  position: relative;
+  z-index: 2;
+}
+
+.wheel-title {
+  @include media-breakpoint-only(lg) {
+    margin-right: rem(-32);
+  }
+}
+
+.wheel-text {
+  margin-bottom: 2.125rem;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 1.5rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 3rem;
+    margin-right: rem(64);
+  }
+}
+
+.wheel-image-wrapper {
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    height: rem(356 * .5);
+    margin-left: calc(var(--#{$prefix}gutter-x) * -1);
+    margin-right: calc(var(--#{$prefix}gutter-x) * -1);
+    margin-top: 4rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 100%;
+  }
+}
+
+.wheel-image {
+  height: rem(360);
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: rem(360);
+
+  @include media-breakpoint-up(md) {
+    height: rem(545);
+    top: 50%;
+    transform: translate(-25.5%, -50%);
+    width: rem(545);
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: rem(720);
+    top: 0;
+    transform: translate(-35%, -2%);
+    width: rem(720);
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: rem(864);
+    transform: translate(-35%, -2%);
+    width: rem(864);
+  }
+
+  picture, img {
+    height: auto;
+    display: block;
+    width: 100%;
+  }
+
+  img {
+    left: 0;
+    position: absolute;
+    top: 0;
+    @include transition(opacity .35s ease);
+
+    &:not(.lazyloaded) {
+      opacity: 0;
+    }
+
+    &.wheel-ring {
+      filter: drop-shadow(0 rem(1) rem(7) rgba($black, .1));
+
+      @include media-breakpoint-up(md) {
+        filter: drop-shadow(0 rem(4) rem(12) rgba($black, .25));
+      }
+    }
+  }
+}
+
+.recipe {
+  margin-bottom: rem(16);
+}
+
+.recipe-title {
+  font-family: var(--bs-body-font-family);
+  letter-spacing: normal;
+  margin-bottom: rem(16);
+}
+
+.recipe-block {
+  border-top: 1px solid $white;
+  margin-bottom: rem(12);
+  padding-top: rem(12);
+
+  &__title {
+    font-family: var(--bs-body-font-family);
+    letter-spacing: -.01em;
+    margin-bottom: rem(24);
+  }
+
+  &__text {
+    font-size: rem(10);
+    font-weight: 500;
+    line-height: 1.4;
+
+    &--cols {
+      columns: 2 auto;
+      column-gap: $grid-gutter-width;
+    }
+  }
+}
+
+.section--result {
+  .section-title {
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 1.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 1rem;
+    }
+  }
+}

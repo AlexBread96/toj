@@ -1,0 +1,5 @@
+.container {
+  @include media-breakpoint-down(sm) {
+    --bs-gutter-x: 2.5rem;
+  }
+}

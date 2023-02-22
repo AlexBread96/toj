@@ -1,0 +1,46 @@
+.slide(data-anchor="start")
+  .container
+    .row
+      .col-md-8.col-lg-6
+        h2.section-title.quiz-title Узнай, насколько#[br]ты #[span ТОЖ]ник
+    .quiz-container.row
+      .col-md-6
+        .quiz-main
+          .section-text.quiz-text
+            p Хочешь узнать, насколько ты&nbsp;соответствуешь критериям настоящего ТОЖника?
+            p Определить твой уровень ТОЖа поможет наш ТОЖный тест, а&nbsp;ещё он&nbsp;точно поднимет настроение всем, кто его пройдёт!
+            .quiz-image.d-md-none
+              picture
+                source(data-srcset="i/quiz/quiz-image-sm.avif, i/quiz/quiz-image-sm@2x.avif 2x" type="image/avif")
+                source(data-srcset="i/quiz/quiz-image-sm.webp, i/quiz/quiz-image-sm@2x.webp 2x" type="image/webp")
+                source(data-srcset="i/quiz/quiz-image-sm.png, i/quiz/quiz-image-sm@2x.png 2x" type="image/png")
+                img.lazyload(data-src="i/quiz/quiz-image-sm.png" width="298" height="311" alt="" loading="lazy")
+            p Тебе нужно просто расслабиться, ответить на&nbsp;вопросы и&nbsp;получить удовольствие.
+            p Выиграй призы за&nbsp;прохождение теста&nbsp;&mdash; пройди его в&nbsp;нашем чат-боте и&nbsp;участвуй в&nbsp;розыгрыше денежных сертификатов OZON!
+            p Ну&nbsp;что, начнём?
+      .col-md-6.d-none.d-md-block
+        .quiz-image
+          picture
+            source(data-srcset="i/quiz/quiz-image.avif, i/quiz/quiz-image@2x.avif 2x" type="image/avif")
+            source(data-srcset="i/quiz/quiz-image.webp, i/quiz/quiz-image@2x.webp 2x" type="image/webp")
+            source(data-srcset="i/quiz/quiz-image.png, i/quiz/quiz-image@2x.png 2x" type="image/png")
+            img.lazyload(data-src="i/quiz/quiz-image.png" width="542" height="565" alt="" loading="lazy")
+    .quiz-links
+      .quiz-links-item
+        .quiz-links-item__title.text-nowrap Тест в чат-боте
+        .quiz-links-item__label
+          +icon("arrow-down")(width="11" height="16")
+          span Выбери удобный мессенджер
+        .quiz-links-item__buttons
+          div
+            a.btn.btn-secondary.btn-iconed(href="#" target="_blank")
+              span Тест в Telegram
+              +icon("telegram-sm")(width="17" height="14")
+          div
+            a.btn.btn-secondary.btn-iconed(href="#" target="_blank")
+              span Тест в VK
+              +icon("vk-sm")(width="17" height="12")
+      .quiz-links-item
+        .quiz-links-item__buttons
+          div
+            button.btn.btn-secondary.btn-quiz(type="button") Тест на сайте

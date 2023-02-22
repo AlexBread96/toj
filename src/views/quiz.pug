@@ -1,0 +1,13 @@
+extends layouts/quiz
+include helpers/mixins
+
+block variables
+  - var title = "Творожный Образ Жизни";
+
+block scripts
+  script(src="js/libs.js")
+  script(src="js/main.js")
+
+block content
+  section.section.section--quiz.fp-auto-height-responsive(data-anchor="quiz")
+    include ../blocks/modules/quiz/quiz

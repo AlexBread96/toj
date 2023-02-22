@@ -1,0 +1,98 @@
+.section--footer {
+  // background-color: $darkblue;
+
+  @include media-breakpoint-up(xl) {
+    font-size: 1.25rem;
+  }
+}
+
+.footer-container {
+  @include media-breakpoint-down(md) {
+    padding: rem(50) rem(30) rem(20);
+  }
+
+  @include media-breakpoint-up(md) {
+    align-items: center;
+    display: flex;
+    padding-bottom: rem(40);
+    padding-top: rem(40);
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom: rem(66);
+    padding-top: rem(66);
+  }
+}
+
+.footer-contacts {
+  letter-spacing: -.03em;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+
+  p:not(:first-child) {
+    margin-top: 1em;
+  }
+}
+
+.footer-links {
+  letter-spacing: -.03em;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+
+.footer-side {
+  @include media-breakpoint-down(md) {
+    margin-top: rem(36);
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-left: auto;
+  }
+}
+
+.footer-socials {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+  }
+}
+
+.footer-socials-item {
+  a {
+    color: $darkblue;
+    display: block;
+    height: rem(64);
+    position: relative;
+    width: rem(64);
+
+    &::before {
+      border: 1px solid $white;
+      border-radius: 50%;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: inherit;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $white;
+      }
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}

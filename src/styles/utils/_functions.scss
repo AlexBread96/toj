@@ -1,0 +1,17 @@
+@use "sass:math";
+
+@function get-container-max-width($bp) {
+  @return map-get($container-max-widths, $bp);
+}
+
+@function get-col-width($bp) {
+  @return calc(math.div(get-container-max-width($bp), $grid-columns) - $grid-gutter-width);
+}
+
+@function rem($val) {
+  @return math.div($val, 16) * 1rem;
+}
+
+@function em($val) {
+  @return math.div($val, 16) * 1em;
+}

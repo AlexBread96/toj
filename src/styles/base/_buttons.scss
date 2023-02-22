@@ -1,0 +1,49 @@
+.btn {
+  box-shadow: var(--bs-btn-box-shadow);
+  padding-bottom: calc(var(--bs-btn-padding-y) * .875);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-secondary {
+  --#{$prefix}btn-hover-color: #{$black};
+  --#{$prefix}btn-hover-bg: #{$white};
+  --#{$prefix}btn-hover-border-color: #{$white};
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($darkblue, $white, 15%))};
+  --#{$prefix}btn-active-color: #{$black};
+  --#{$prefix}btn-active-bg: #{$white};
+  --#{$prefix}btn-active-border-color: #{$white};
+}
+
+.btn-light {
+  --#{$prefix}btn-padding-x: .75rem;
+  --#{$prefix}btn-padding-y: .625rem;
+  --#{$prefix}btn-font-size: .75rem;
+  --#{$prefix}btn-color: #{$black};
+  --#{$prefix}btn-bg: #{rgba($white, .85)};
+  --#{$prefix}btn-hover-color: #{$darkblue};
+  --#{$prefix}btn-hover-bg: #{$white};
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($darkblue, $white, 15%))};
+  --#{$prefix}btn-active-color: #{$darkblue};
+  --#{$prefix}btn-active-bg: #{$white};
+}
+
+.btn-iconed {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+
+  .icon {
+    margin-left: .75em;
+  }
+
+  .icon-telegram-sm {
+    height: rem(14);
+    width: rem(17);
+  }
+
+  .icon-vk-sm {
+    height: rem(12);
+    width: rem(17);
+  }
+}

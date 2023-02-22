@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="progress" width="380" height="380" viewBox="0 0 380 380">
+  <circle class="track" cx="190" cy="190" r="161.5" fill="none" stroke="#ADEBFF" stroke-width="57" />
+  <circle class="bar" cx="190" cy="190" r="161.5" fill="none" stroke="#F0758A" stroke-width="57" stroke-linecap="round" />
+  <path class="arrow" fill="#000" d="M350.086 204.553c.78.78 2.046.78 2.826 0l12.718-12.719a2 2 0 0 0-2.826-2.827L351.5 200.313l-11.305-11.306a1.999 1.999 0 1 0-2.827 2.827l12.719 12.719Zm-.586-29.691v28.278h3.997v-28.278H349.5Z"/>
+</svg>

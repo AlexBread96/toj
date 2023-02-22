@@ -1,0 +1,40 @@
+.marquee {
+  --gap: #{rem(30)};
+  align-items: center;
+  background-color: $darkblue;
+  column-gap: var(--gap);
+  display: flex;
+  flex-shrink: 0;
+  height: rem(100);
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-list {
+  animation: scroll 60s linear infinite;
+  column-gap: var(--gap);
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+  min-width: 100%;
+}
+
+.marquee-item {
+  height: rem(72);
+  width: rem(134);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-list {
+    animation-play-state: paused;
+  }
+}

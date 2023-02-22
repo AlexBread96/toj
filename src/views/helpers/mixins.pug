@@ -1,0 +1,8 @@
+mixin icon(name, title)
+  if title
+    svg(class="icon icon-" + name fill="currentColor" role="img" aria-labelledby="icon-" + name + "-title" focusable="false")&attributes(attributes)
+      title(id="icon-" + name + "-title")= title
+      use(xlink:href="i/sprites/sprite.svg#" + name)
+  else
+    svg(class="icon icon-" + name fill="currentColor" role="img" aria-hidden="true" focusable="false")&attributes(attributes)
+      use(xlink:href="i/sprites/sprite.svg#" + name)

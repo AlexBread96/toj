@@ -1,0 +1,129 @@
+@use "sass:math";
+
+html {
+  font-size: 16px;
+
+  @media (max-width: 359.98px) {
+    font-size: math.div(16, 360) * 100vw;
+  }
+
+  @include media-breakpoint-up(md) {
+    @media (max-height: 739.98px) {
+      font-size: math.div(16, 740) * 100vh;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+
+    @media (max-height: 779.98px) {
+      font-size: math.div(16, 780) * 100vh;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+
+    @media (max-height: 779.98px) {
+      font-size: math.div(16, 780) * 100vh;
+    }
+  }
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, button {
+  @include transition($transition-base);
+}
+
+a {
+  text-decoration-color: var(--#{$prefix}link-hover-color);
+  text-decoration-thickness: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+}
+
+h2, h3 {
+  span {
+    color: $green;
+  }
+}
+
+.section-title {
+  margin-bottom: 2.125rem;
+}
+
+.section-text {
+  line-height: 1.4;
+
+  p, ul, ol, table {
+    margin-bottom: 1.25em;
+  }
+
+  ul {
+    padding-left: rem(24);
+  }
+}
+
+.section-buttons {
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+
+  & + .section-buttons {
+    margin-top: rem(24);
+  }
+
+  div {
+    &:not(:first-child) {
+      @include media-breakpoint-down(md) {
+        margin-top: rem(12);
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-left: rem(12);
+      }
+    }
+  }
+}
+
+.text-larger {
+  font-size: 1.25em;
+}
+
+.fp-section {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.fp-responsive {
+  .main {
+    overflow: hidden;
+  }
+}
+
+.fp-watermark {
+  display: none;
+}
+
+.spinner {
+  background-image: url(../i/6-dots-rotate-white-36.svg);
+  background-repeat: no-repeat;
+  height: 36px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  z-index: -1;
+}

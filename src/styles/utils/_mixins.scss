@@ -1,0 +1,76 @@
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  @if $left is a "unit" or $left == "auto" {
+    left: $left;
+  }
+  @if $right is a "unit" or $right == "auto" {
+    right: $right;
+  }
+  @if $top is a "unit" or $top == "auto" {
+    top: $top;
+  }
+  @if $bottom is a "unit" or $bottom == "auto" {
+    bottom: $bottom;
+  }
+}
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  @include position(absolute, $top, $right, $bottom, $left);
+}
+
+@mixin absolute-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-all($num) {
+  bottom: $num;
+  left: $num;
+  position: absolute;
+  right: $num;
+  top: $num;
+}
+
+@mixin line-clamp($lines, $line-height: $line-height-base) {
+  max-height: $lines * $line-height * 1em;
+  overflow: hidden;
+
+  @supports (-webkit-line-clamp: 1) or (line-clamp: 1) {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    max-height: none;
+  }
+}
+
+@mixin line-clamp-next($lines, $line-height: $line-height-base) {
+  max-height: $lines * $line-height * 1em;
+
+  @supports (-webkit-line-clamp: 1) or (line-clamp: 1) {
+    -webkit-line-clamp: $lines;
+    max-height: none;
+  }
+}
+
+@mixin button-reset() {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+@mixin retina($file, $type) {
+  background-image: url($file + '.' + $type);
+
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+      background-image: url($file + '@2x.' + $type);
+    }
+}

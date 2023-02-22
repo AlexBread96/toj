@@ -1,0 +1,105 @@
+.about-container {
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: rem(526);
+  }
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+}
+
+.about-image {
+  height: rem(.685*868);
+  left: 50%;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  width: rem(.685*968);
+  z-index: -1;
+
+  @include media-breakpoint-down(md) {
+    bottom: rem(-90);
+    transform: translate3d(-46%, 0, 0);
+  }
+
+  @include media-breakpoint-up(md) {
+    height: rem(.725*868);
+    top: 0;
+    transform: translate3d(-77.75%, 3.75%, 0);
+    width: rem(.725*968);
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: rem(868);
+    transform: translate3d(-78.5%, 3.75%, 0);
+    width: rem(968);
+  }
+
+  img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    @include transition(opacity .35s ease);
+
+    &:not(.lazyloaded) {
+      opacity: 0;
+    }
+  }
+}
+
+.about-main {
+  background-color: $pink;
+  box-shadow: 0 .25rem 1.5rem rgba($black, .25);
+
+  @include media-breakpoint-down(md) {
+    margin-left: calc(var(--#{$prefix}gutter-x) * -1);
+    margin-right: calc(var(--#{$prefix}gutter-x) * -1);
+    padding: rem(140) var(--#{$prefix}gutter-x) rem(36);
+  }
+
+  @include media-breakpoint-up(md) {
+    $offset: calc(50vw - get-container-max-width(md) * .5 + var(--#{$prefix}gutter-x) * .5);
+    margin-left: calc(var(--#{$prefix}gutter-x) * -1);
+    margin-right: calc($offset * -1);
+    max-height: 100vh;
+    padding-bottom: rem(70);
+    padding-left: calc(var(--#{$prefix}gutter-x) * 2);
+    padding-right: $offset;
+    padding-top: rem(108);
+  }
+
+  @include media-breakpoint-up(lg) {
+    $offset: calc(50vw - get-container-max-width(lg) * .5 + var(--#{$prefix}gutter-x) * .5);
+    margin-left: 0;
+    margin-right: calc($offset * -1);
+    padding-bottom: rem(200);
+    padding-left: calc(var(--#{$prefix}gutter-x) + get-col-width(lg));
+    padding-right: $offset;
+    padding-top: rem(195);
+  }
+
+  @include media-breakpoint-up(xl) {
+    $offset: calc(50vw - get-container-max-width(xl) * .5 + var(--#{$prefix}gutter-x) * .5);
+    margin-right: calc($offset * -1);
+    padding-left: calc(var(--#{$prefix}gutter-x) + get-col-width(xl));
+    padding-right: $offset;
+  }
+
+  @media (min-width: 1280px) {
+    $offset: calc(1280px * .5 - get-container-max-width(xl) * .5 + var(--#{$prefix}gutter-x) * .5);
+    margin-right: calc($offset * -1);
+    padding-right: $offset;
+  }
+}
+
+.about-title {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 2.5rem;
+  }
+}
