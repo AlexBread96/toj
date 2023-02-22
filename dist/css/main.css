@@ -5184,6 +5184,10 @@ input[type=search]::-webkit-search-decoration {
   .move-button span {
     display: none;
   }
+
+  .wheel-text br {
+    display: none;
+  }
 }
 
 @media (max-width: 743.98px) {

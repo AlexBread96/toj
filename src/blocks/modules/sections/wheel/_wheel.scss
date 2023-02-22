@@ -50,6 +50,12 @@
     margin-bottom: 3rem;
     margin-right: rem(64);
   }
+
+  br {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
 }
 
 .wheel-image-wrapper {
@@ -95,7 +101,8 @@
     width: rem(864);
   }
 
-  picture, img {
+  picture,
+  img {
     height: auto;
     display: block;
     width: 100%;
