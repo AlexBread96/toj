@@ -1,5 +1,6 @@
 .section--move {
   padding-top: rem(140);
+  font-size: rem(12);
 
   @include media-breakpoint-only(md) {
     padding-top: rem(100);
@@ -29,6 +30,26 @@
 
   @include media-breakpoint-up(lg) {
     padding-top: rem(40);
+  }
+}
+
+.move-button {
+  margin-top: rem(48);
+
+  span { 
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+
+  @include media-breakpoint-only(md) {
+    margin-top: rem(31); 
+    margin-bottom: rem(36); 
+  }
+
+  @include media-breakpoint-down(md) { 
+    margin-bottom: rem(21); 
   }
 }
 

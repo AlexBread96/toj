@@ -3052,10 +3052,15 @@ input[type=search]::-webkit-search-decoration {
 
 .section--move {
   padding-top: 8.75rem;
+  font-size: 0.75rem;
 }
 
 .move-container {
   display: flex;
+}
+
+.move-button {
+  margin-top: 3rem;
 }
 
 .move-video {
@@ -5175,6 +5180,10 @@ input[type=search]::-webkit-search-decoration {
   .navbar-nav .nav-link {
     width: 100%;
   }
+
+  .move-button span {
+    display: none;
+  }
 }
 
 @media (max-width: 743.98px) {
@@ -5293,6 +5302,10 @@ input[type=search]::-webkit-search-decoration {
     margin-bottom: 0.75rem;
   }
 
+  .move-button {
+    margin-bottom: 1.3125rem;
+  }
+
   .quiz-links-item:not(:first-child) {
     margin-top: 2.25rem;
   }
@@ -5359,6 +5372,11 @@ input[type=search]::-webkit-search-decoration {
 
   .move-main {
     margin-bottom: 1.75rem;
+  }
+
+  .move-button {
+    margin-top: 1.9375rem;
+    margin-bottom: 2.25rem;
   }
 
   .more-title {
