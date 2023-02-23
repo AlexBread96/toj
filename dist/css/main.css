@@ -4566,7 +4566,6 @@ input[type=search]::-webkit-search-decoration {
     margin-right: calc((50vw - 362px + var(--bs-gutter-x) * 0.5) * -1);
     max-height: 100vh;
     max-height: calc(var(--vh, 1vh) * 100);
-    padding-bottom: 4.375rem;
     padding-right: calc(50vw - 362px + var(--bs-gutter-x) * 0.5);
   }
 
@@ -5055,7 +5054,6 @@ input[type=search]::-webkit-search-decoration {
   .alice-main {
     margin-left: 0;
     margin-right: calc((50vw - 480px + var(--bs-gutter-x) * 0.5) * -1);
-    padding-bottom: 12.5rem;
     padding-right: calc(50vw - 480px + var(--bs-gutter-x) * 0.5);
   }
 
