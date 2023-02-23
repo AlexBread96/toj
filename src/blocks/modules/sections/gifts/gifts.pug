@@ -1,0 +1,28 @@
+section.section.section--gifts.fp-auto-height-responsive(data-anchor="gifts")
+  .container
+    .gifts-container.row 
+      .gifts-main
+        h2.section-title.gifts-title #[span ТОЖ]НЫЕ ПОДАРКИ   
+      .col-lg-12
+        .gifts-image-wrapper
+          .gifts-image
+            picture
+              source(data-srcset="i/gifts/gifts-image.webp, i/gifts/gifts-image@2x.webp 2x" media="(min-width: 744px)" type="image/webp")
+              source(data-srcset="i/gifts/gifts-image.png, i/gifts/gifts-image@2x.png 2x" media="(min-width: 744px)" type="image/png")
+              source(data-srcset="i/gifts/gifts-image-sm.webp, i/gifts/gifts-image-sm@2x.webp 2x" type="image/webp")
+              source(data-srcset="i/gifts/gifts-image-sm.png, i/gifts/gifts-image-sm@2x.png 2x" type="image/png")
+              img.lazyload(data-src="i/gifts/gifts-image.png" alt="" loading="lazy")
+            .gifts-image__tip.gifts-image__tip--1 
+              p Пройди тест «Насколько ты ТОЖник» и раскрути «Колесо ТОЖ», чтобы поучаствовать в розыгрыше 35 денежных сертификатов OZON на 500 рублей!
+              .gifts-button
+                button.btn.btn-secondary(type="button" data-scrollto="quiz") Пройди тест
+                button.btn.btn-secondary(type="button" data-scrollto="wheel") Вращай колесо
+            .gifts-image__tip.gifts-image__tip--2 
+              p Хочешь выиграть наш суперприз?  Мы&nbsp;подарим беспроводные наушники трем самым активным тожникам!
+              p Участвуй в&nbsp;челлендже #творобика, делись видео в&nbsp;VK и&nbsp;регистрируй  свой результат в&nbsp;чат-боте! Трех победителей мы&nbsp;объявим уже 1&nbsp;мая!
+              .gifts-button
+                button.btn.btn-secondary(type="button" data-scrollto="quiz") Выиграй суперприз
+            .gifts-image__tip.gifts-image__tip--3 
+              p Раз в неделю разыгрываем Яндекс.Станцию Мини за участие в челлендже #творобика.  Успей разместить видео в VK.
+              .gifts-button
+                button.btn.btn-secondary(type="button" data-scrollto="challange") участвуй в челлендже

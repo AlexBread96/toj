@@ -1,0 +1,372 @@
+@use "sass:math";
+
+.section--gifts {
+  padding-top: rem(140);
+  padding-bottom: rem(130);
+
+  @include media-breakpoint-up(md) {
+    padding-top: rem(70);
+  }
+
+
+}
+
+.gifts-container {
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row-reverse;
+  }
+}
+
+.gifts-title {
+  @include media-breakpoint-up(md) {
+    margin-bottom: .875rem;
+  }
+}
+
+.gifts-image-wrapper {
+  display: flex;
+  justify-content: center; 
+
+  @include media-breakpoint-down(md) {
+    padding-top: rem(267);
+    padding-bottom: rem(320);
+
+  }
+}
+
+.gifts-image {
+  position: relative;
+  z-index: unset;
+  width: rem(564);
+  height: rem(511);  
+
+  @include media-breakpoint-down(lg) {
+    transform: translateX(105px);
+    width: rem(417);
+    height: rem(403);
+  }
+
+  @include media-breakpoint-down(md) {
+    transform: translateX(0);
+    width: rem(370);
+    height: rem(325);
+  }
+
+
+
+  &::before {
+    @include media-breakpoint-up(lg) {
+      background-image: url(../i/whois/whois-bg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+      height: em(1897);
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -27%);
+      width: em(1600);
+      z-index: -1;
+    }
+  }
+
+  img {
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+
+    }
+
+    &:not(.lazyloaded) {
+      opacity: 0;
+    }
+  }
+
+  &__tip {
+    line-height: 1.4;
+    position: absolute;
+    z-index: 99;
+    pointer-events: all; 
+
+    p {
+      margin-bottom: rem(22);
+      font-size: rem(12);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      @include media-breakpoint-down(md) {
+        background-image: repeating-linear-gradient(to bottom, $white, $white 2px, transparent 2px, transparent 4px);
+        width: em(2);
+      }
+
+
+      @include media-breakpoint-up(md) {
+        background-image: repeating-linear-gradient(to right, $white, $white 2px, transparent 2px, transparent 4px);
+        height: em(2);
+      }
+    }
+
+    &::after {
+      background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'><g fill='none' fill-rule='evenodd'><circle cx='17' cy='17' r='16.5' stroke='#FFF'/><circle cx='17' cy='17' r='5' fill='#FFF'/></g></svg>"));
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: em(34);
+      width: em(34);
+    }
+
+    &--1 {
+
+      @include media-breakpoint-down(lg) {
+        bottom: em(0);
+        left: em(0);
+        padding-top: em(18);
+        padding-left: em(170);
+        width: em(500);
+      }
+
+      @include media-breakpoint-down(md) {
+        bottom: em(260);
+        left: em(46);
+        padding-right: em(0);
+        padding-left: em(17);
+        padding-top: em(0);
+        padding-bottom: em(124);
+        width: em(267);
+
+        .gifts-button {
+          button {
+            margin-bottom: rem(12);
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        bottom: em(16);
+        left: em(400);
+        padding-top: em(18);
+        padding-left: em(170);
+        width: em(500);
+      }
+
+      @include media-breakpoint-only(lg) {
+        bottom: em(353);
+        left: em(410);
+      }
+
+      @include media-breakpoint-up(lg) {
+        bottom: em(350);
+        left: em(360);
+      }
+
+      @include media-breakpoint-down(lg) {
+        bottom: em(150);
+        left: rem(-245);
+        padding-top: em(18);
+        padding-left: 0;
+        padding-right: em(70);
+        width: em(390);
+
+        p {
+          width: em(310)
+        }
+      }
+
+      &::before {
+        @include media-breakpoint-down(md) {
+          bottom: 0;
+          right: em(17);
+          top: em(17);
+        }
+
+        @include media-breakpoint-up(md) {
+          left: 0;
+          right: 0;
+          top: 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+          left: 0;
+          right: 0;
+          top: 0;
+        }
+
+      }
+
+      &::after {
+        @include media-breakpoint-down(md) {
+          right: em(1);
+          left: em(-16);
+          top: unset;
+          bottom: em(-12);
+        }
+
+        @include media-breakpoint-up(md) {
+          left: em(-16);
+          top: em(-16);
+        }
+
+        @include media-breakpoint-down(lg) {
+          right: -1em;
+          top: -1em;
+          left: unset;
+        }
+
+      }
+    }
+
+    &--2 {
+      @include media-breakpoint-down(md) {
+        bottom: em(-227);
+        left: em(25);
+        padding-left: em(37);
+        padding-top: em(80);
+        width: em(255);
+      }
+
+      @include media-breakpoint-down(lg) {
+        bottom: rem(-175);
+        left: rem(-245);
+        padding-top: em(25);
+        padding-right: em(18);
+        width: em(328);
+      }
+
+      @include media-breakpoint-up(md) {
+        bottom: rem(-5);
+        left: rem(-250);
+        padding-top: em(25);
+        padding-right: em(28);
+        width: em(295);
+      }
+
+      @include media-breakpoint-only(lg) {
+        bottom: em(-45);
+        left: em(-240);
+      }
+
+      &::before {
+        @include media-breakpoint-down(md) {
+          bottom: 0;
+          left: em(17);
+          top: em(17);
+        }
+
+        @include media-breakpoint-up(md) {
+          left: 0;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      &::after {
+        @include media-breakpoint-down(md) {
+          left: em(1);
+          top: em(1);
+        }
+
+        @include media-breakpoint-up(md) {
+          right: em(-16);
+          top: em(-16);
+        }
+      }
+    }
+
+    &--3 {
+      text-align: left;
+
+
+      @include media-breakpoint-down(md) {
+        bottom: em(-400);
+        left: em(36);
+        padding-right: em(5);
+        padding-top: em(360);
+        width: em(250);
+      }
+
+      @include media-breakpoint-up(md) {
+        bottom: em(16);
+        left: em(400);
+        padding-top: em(18);
+        padding-left: em(65);
+        width: em(324);
+      }
+
+      @include media-breakpoint-up(lg) {
+        bottom: em(0);
+        left: em(524);
+      }
+
+      @include media-breakpoint-down(lg) {
+        bottom: em(-200);
+        left: em(186);
+        padding-right: em(0);
+        padding-left: 0;
+        padding-top: em(0);
+        width: em(256);
+
+      }
+
+      @include media-breakpoint-only(lg) {
+        bottom: em(-70);
+        left: em(604);
+        width: em(304);
+      }
+
+
+      &::before {
+        @include media-breakpoint-down(md) {
+          bottom: 0;
+          right: em(17);
+          top: em(17);
+          height: unset;
+        }
+
+        @include media-breakpoint-down(lg) {
+          bottom: 0;
+          right: em(16);
+          left: em(270);
+          top: em(-47);
+          background-image: repeating-linear-gradient(to bottom, $white, $white 2px, transparent 2px, transparent 4px);
+          width: em(2);
+          height: em(184);
+        }
+
+        @include media-breakpoint-up(md) {
+          left: 0;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      &::after {
+        @include media-breakpoint-down(md) {
+          right: em(1);
+          top: em(1);
+        }
+
+        @include media-breakpoint-down(lg) {
+          right: em(1);
+          left: em(254);
+          top: em(-58);
+        }
+
+        @include media-breakpoint-up(md) {
+          left: em(-16);
+          top: em(-16);
+        }
+      }
+    }
+  }
+}
