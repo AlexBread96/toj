@@ -1,6 +1,6 @@
 @use "sass:math";
 
-.challange-container {
+.alice-container {
   position: relative;
 
   @include media-breakpoint-down(md) {
@@ -9,21 +9,23 @@
 
   @include media-breakpoint-up(md) {
     display: flex;
+    padding-top: rem(108);
   }
 }
 
-.challange-image {
-  height: rem(.685*635);
+.alice-image {
+  height: rem(.685*650);
   left: 50%;
   margin: 0;
   max-width: none;
   padding: 0;
   pointer-events: none;
   position: absolute;
-  width: rem(.685*585);
+  width: rem(.685*530);
   z-index: -1;
 
-  &::before { 
+  &::before {
+ 
       background-image: url(../i/whois/whois-bg.svg);
       background-repeat: no-repeat;
       background-size: cover;
@@ -40,19 +42,21 @@
 
   @include media-breakpoint-down(md) {
     bottom: rem(-90);
-    transform: translate3d(-47%, -40%, 0);
+    height: rem(366);
+    transform: translate3d(-47%, -75%, 0);
+    width: rem(298);
   }
 
   @include media-breakpoint-up(md) {
-    height: rem(336);
+    height: rem(390);
     top: 0;
-    transform: translate(-118.75%, 70%);
-    width: rem(311);
+    transform: translate(-110.75%, 75%);
+    width: rem(320);
   }
 
   @include media-breakpoint-up(lg) {
     height: rem(635);
-    transform: translate(-118.5%, 24%);
+    transform: translate(-100.5%, -2%);
     width: rem(585);
   }
 
@@ -70,12 +74,12 @@
   }
 }
 
-.challange-main {
+.alice-main {
 
   @include media-breakpoint-down(md) {
     margin-left: calc(var(--#{$prefix}gutter-x) * -1);
     margin-right: calc(var(--#{$prefix}gutter-x) * -1);
-    padding: rem(140) var(--#{$prefix}gutter-x) rem(36);
+    padding: rem(10) var(--#{$prefix}gutter-x) rem(36);
   }
 
   @include media-breakpoint-up(md) {
@@ -86,7 +90,7 @@
     padding-bottom: rem(70);
     // padding-left: calc(var(--#{$prefix}gutter-x) * 2);
     padding-right: $offset;
-    padding-top: rem(108);
+    // padding-top: rem(108);
   }
 
   @include media-breakpoint-up(lg) {
@@ -96,7 +100,7 @@
     padding-bottom: rem(200);
     // padding-left: calc(var(--#{$prefix}gutter-x) + get-col-width(lg));
     padding-right: $offset;
-    padding-top: rem(195);
+    // padding-top: rem(195);
   }
 
   @include media-breakpoint-up(xl) {
@@ -113,8 +117,8 @@
   }
 }
 
-.challange-title {
+.alice-title {
   @include media-breakpoint-up(lg) {
     margin-bottom: 2.5rem;
-  }
+  } 
 }
